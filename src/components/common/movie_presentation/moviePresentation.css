@@ -1,0 +1,46 @@
+.mp-sizing {
+    background-color: rgb(49, 49, 49);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.mp-border {
+    border: #7d1303 6px solid;
+}
+.btn-fa {
+    font-size: 50px;
+    color: #7d1303;
+}
+.btn-back {
+    height: 100px;
+    width: 100px;
+    border-width: 6px;
+    border-color: #7d1303;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+.btn-link2 {
+    width: 100px;
+    height: 100px;
+}
+.mp-title {
+    font-size: 60px;
+}
+.mp-title-border {
+    border-color: #7d1303;
+    border-width: 0 0 6px 0;
+    border-style: solid;
+}
+.mp-img-container {
+    border-color: #7d1303;
+    border-width: 0 0 6px 0;
+    border-style: solid;
+}
+.mp-img {
+    height: 850px;
+    border: 6px #c52006 solid;
+    margin: 50px 0
+}
+.mp-p {
+    font-size: 35px;
+    padding: 20px 20px 20px 30px;
+}

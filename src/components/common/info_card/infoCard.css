@@ -1,0 +1,75 @@
+/* ---------sizing and position----------  */
+/* .h-1150px {
+    height: 1150px;
+} */
+.IC-margin {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.info-card {
+    width: 90%;
+}
+/* -----radius---------- */
+.my-radius {
+    border-radius: 50px;
+}
+
+/* ----------super frustrating triple border :D -------- */
+.triple-border {
+    border: 8px rgb(255, 255, 255) solid;
+    position: relative;
+}
+.triple-border::before {
+    content: "";
+    border: 8px rgb(0, 0, 0) solid;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 50px;
+
+}
+.triple-border::after {
+    content: "";
+    border: 8px rgb(0, 0, 0) solid;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    right: -16px;
+    bottom: -16px;
+    border-radius: 50px;
+
+}
+
+/* ----------hover even more frustrating--------  */
+.Link {
+    display: none;
+    color: white;
+}
+.text-t {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 70px;
+    z-index: 1;
+}
+.hover-t:hover .Link {
+    display: block;
+    transition: 0.3s;
+
+}
+.hover-t:hover .text-t {
+    background-color: rgba(0, 0, 0, 0.438);
+    transition: 0.3s;
+
+}
+.img-t {
+    position: relative;
+    display: inline-block;
+}
