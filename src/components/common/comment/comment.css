@@ -1,0 +1,14 @@
+.c-font-comment {
+    font-size: 34px;
+}
+.c-font-name {
+    font-size: 43px;
+}
+.c-border {
+    border-top: 6px #7d1303 solid;
+}
+.c-btn-pagination {
+    height: 75px;
+    width: 75px;
+    font-size: 40px;
+}

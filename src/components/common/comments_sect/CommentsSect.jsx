@@ -2,46 +2,54 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import Axios from 'axios'
 import Comment from '../comment/Comment'
+import './commentsSect.css'
 
-function CommentsSect() {
-    const [users, setUsers] = useState([])
-    const [comments, setComments] = useState([])
-    const [photos, setPhotos] = useState([])
-    const [usersComments, setUsersComments] = useState([])
+function CommentsSect(props) {
+    const {setUsers,setComments,setPhotos,setUsersComments,users,comments,photos,usersComments,setPage,page,setBackward,backward,setForward,forward,setCurrentPage,currentPage,commentsFiltered,setCommentsFiltered} = props
 
-    const commentsWAD = []
+    function cleanStates () {
+        setUsers([])
+        setComments([])
+        setPhotos([])
+        setUsersComments([])
+    }
+    
+
+    const commentsWAD = [];
 
     useEffect(() => {
         handleData()
-    }, [users , comments , photos])
+    }, [users , comments , photos]);
 
 
     useEffect(() => {
         if (commentsWAD.length !== 0) {
             setUsersComments(commentsWAD)
         }
-    }, [commentsWAD])
+    }, [commentsWAD]);
 
     
     useEffect(() => {
+        cleanStates()
         usersData()
         commentsData()
         photosData()
-    }, [])
+    }, []);
 
 
     // i del primer for *10 + i del segundo for 
     function handleData () {
         for (let i = 0; i < 8 ; i++) {
-            const c = i
-            const cID = Math.ceil((c + 1) / 2 ) 
+            const c = i;
+            const cID = Math.ceil((c + 1) / 2 ); 
             for (let i = 0; i < users.length; i++) {
                 if((users.length !== 0)&&(comments.length !== 0)&&(photos.length !== 0)) {
                     const user = users[i];
-                    const photo = photos[i]
-                    const comment = comments[i + (c * 10)]
+                    const photo = photos[i];
+                    const comment = comments[i + (c * 10)];
                     
                     const commentWAD = {
+                        page: c + 1,
                         movie: cID,
                         name: user?.name,
                         username: user?.username,
@@ -49,8 +57,8 @@ function CommentsSect() {
                         comment: comment?.body,
                         photoB: photo?.url,
                         photoS: photo?.thumbnailUrl
-                    }
-                    commentsWAD.push(commentWAD)
+                    };
+                    commentsWAD.push(commentWAD);
                 }
 
             }
@@ -77,7 +85,8 @@ function CommentsSect() {
     }
     return (
         <div>
-            <Comment data={usersComments}/>
+            <h2 className="text-white c-font">Comments:</h2>
+            <Comment setCurrentPage={setCurrentPage} currentPage={currentPage} commentsFiltered={commentsFiltered} setCommentsFiltered={setCommentsFiltered} setBackward={setBackward} backward={backward} setForward={setForward} forward={forward} data={usersComments} setPage={setPage} page={page} />
         </div>
     )
 }
