@@ -5,7 +5,7 @@ import Comment from '../comment/Comment'
 import './commentsSect.css'
 
 function CommentsSect(props) {
-    const {setUsers,setComments,setPhotos,setUsersComments,users,comments,photos,usersComments,setPage,page,setBackward,backward,setForward,forward,setCurrentPage,currentPage,commentsFiltered,setCommentsFiltered} = props
+    const {setDataState,dataState,setUsers,setComments,setPhotos,setUsersComments,users,comments,photos,usersComments,setPage,page,setBackward,backward,setForward,forward,setCurrentPage,currentPage,commentsFiltered,setCommentsFiltered} = props
 
     function cleanStates () {
         setUsers([])
@@ -86,7 +86,7 @@ function CommentsSect(props) {
     return (
         <div>
             <h2 className="text-white c-font">Comments:</h2>
-            <Comment setCurrentPage={setCurrentPage} currentPage={currentPage} commentsFiltered={commentsFiltered} setCommentsFiltered={setCommentsFiltered} setBackward={setBackward} backward={backward} setForward={setForward} forward={forward} data={usersComments} setPage={setPage} page={page} />
+            <Comment setDataState={setDataState} dataState={dataState} setCurrentPage={setCurrentPage} currentPage={currentPage} commentsFiltered={commentsFiltered} setCommentsFiltered={setCommentsFiltered} setBackward={setBackward} backward={backward} setForward={setForward} forward={forward} data={usersComments} setPage={setPage} page={page} />
         </div>
     )
 }

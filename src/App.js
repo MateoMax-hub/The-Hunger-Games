@@ -21,6 +21,7 @@ function App() {
   const [forward, setForward] = useState(false)
   const [commentsFiltered, setCommentsFiltered] = useState([])
   const [currentPage, setCurrentPage] = useState([])
+  const [dataState, setDataState] = useState(false)
 
   return (
     <>
@@ -34,7 +35,7 @@ function App() {
           </Route>
 
           <Route path="/movie/:idMovie">
-            <Movie setCurrentPage={setCurrentPage} currentPage={currentPage} commentsFiltered={commentsFiltered} setCommentsFiltered={setCommentsFiltered} setBackward={setBackward} backward={backward} setForward={setForward} forward={forward} page={page} setPage={setPage} users={users} setUsers={setUsers} comments={comments} setComments={setComments} photos={photos} setPhotos={setPhotos} usersComments={usersComments} setUsersComments={setUsersComments}/>
+            <Movie setDataState={setDataState} dataState={dataState} setCurrentPage={setCurrentPage} currentPage={currentPage} commentsFiltered={commentsFiltered} setCommentsFiltered={setCommentsFiltered} setBackward={setBackward} backward={backward} setForward={setForward} forward={forward} page={page} setPage={setPage} users={users} setUsers={setUsers} comments={comments} setComments={setComments} photos={photos} setPhotos={setPhotos} usersComments={usersComments} setUsersComments={setUsersComments}/>
           </Route>
 
         </Switch>

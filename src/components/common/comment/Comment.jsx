@@ -4,11 +4,12 @@ import './comment.css'
 
 function Comment(props) {
     const { idMovie } = useParams();
-    const { page , setPage , setBackward , backward , setForward , forward,setCurrentPage,currentPage,commentsFiltered,setCommentsFiltered } = props
+    const {setDataState,dataState, page , setPage , setBackward , backward , setForward , forward,setCurrentPage,currentPage,commentsFiltered,setCommentsFiltered } = props
 
-
+    // pages required, one for each 10 comments -------- 
     const pages = Math.floor(commentsFiltered.length / 10)
 
+    // pagination buttons management ----------------------
     useEffect(() => {
         setPage(parseInt(page))
         handleButtons()
@@ -18,12 +19,22 @@ function Comment(props) {
     useEffect(() => {
         setPage(1)
         setBackward(false)
-        filter()
     }, [])
+
+    // pathing of data -----------------
+    useEffect(() => {
+        if (props.data.length !== 0) {
+            filter()
+        }
+    }, [props.data])
     
     useEffect(() => {
         filterPagination()
     }, [commentsFiltered])
+
+
+    useEffect(() => {
+    }, [currentPage])
 
     function filter() {
         setCommentsFiltered(props.data.filter((c) => c.movie === parseInt(idMovie)))
@@ -32,6 +43,8 @@ function Comment(props) {
     function filterPagination() {
         setCurrentPage(commentsFiltered.slice((page-1)*10,page*10))
     }
+
+    // buttons management -------------------------- 
 
     function handleButtons() {
         if(page === 1) {
@@ -46,7 +59,6 @@ function Comment(props) {
         }
     }
 
-
     const buttons = []
     for (let i = 0; i < pages; i++) {
         if (i+1 === page){
@@ -57,6 +69,8 @@ function Comment(props) {
             buttons.push(button)
         }
     }
+
+    // -------------------------------------------
 
     return (
         <>
