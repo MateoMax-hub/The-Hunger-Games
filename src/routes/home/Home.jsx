@@ -10,10 +10,10 @@ import hg4 from './../../img/hg-4.jpg'
 function Home() {
     return (
         <div className="home-bg">
-            <InfoCard movie={hg1} mid="hg-1"/>
-            <InfoCard movie={hg2} mid="hg-2"/>
-            <InfoCard movie={hg3} mid="hg-3"/>
-            <InfoCard movie={hg4} mid="hg-4"/>
+            <InfoCard movie={hg1} mid="1"/>
+            <InfoCard movie={hg2} mid="2"/>
+            <InfoCard movie={hg3} mid="3"/>
+            <InfoCard movie={hg4} mid="4"/>
         </div>
     )
 }

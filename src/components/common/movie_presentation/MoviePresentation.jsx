@@ -1,7 +1,6 @@
 import React from 'react'
 import data from './../../../json/movieData.json'
 import { useParams, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 import './moviePresentation.css'
 import hg1 from './../../../img/hg-1.png'
 import hg2 from './../../../img/hg-2.jpg'
@@ -13,12 +12,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function MoviePresentation() {
     const { idMovie } = useParams()
-    const movie = data.filter((m) => m.id === idMovie)
+    const movie = data.filter((m) => m.img === idMovie)
 
-    const img1 = movie[0].img === "hg1"
-    const img2 = movie[0].img === "hg2"
-    const img3 = movie[0].img === "hg3"
-    const img4 = movie[0].img === "hg4"
+    const img1 = movie[0].img === "1"
+    const img2 = movie[0].img === "2"
+    const img3 = movie[0].img === "3"
+    const img4 = movie[0].img === "4"
 
     return (
         <div className="mp-sizing">

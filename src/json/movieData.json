@@ -3,24 +3,24 @@
         "id": "hg-1",
         "title": "The Hunger Games",
         "description": "Katniss Everdeen voluntarily takes her younger sister's place in the Hunger Games: a televised competition in which two teenagers from each of the twelve Districts of Panem are chosen at random to fight to the death. In a dystopian future, the totalitarian nation of Panem is divided into 12 districts and the Capitol.",
-        "img": "hg1"
+        "img": "1"
     },
     {
         "id": "hg-2",
         "title": "The Hunger Games catching fire",
         "description": "Katniss Everdeen and Peeta Mellark become targets of the Capitol after their victory in the 74th Hunger Games sparks a rebellion in the Districts of Panem. ... He tells Katniss that while on tour she better try to make sure that she puts out the flames or else everyone she cares about will be in danger.",
-        "img": "hg2"
+        "img": "2"
     },
     {
         "id": "hg-3",
         "title": "The Hunger Games Mockingjay Part 1",
         "description": "Under the leadership of President Coin and the advice of her friends, Katniss becomes the 'Mockingjay', the symbol of rebellion for the districts of Panem. ... She agrees to become the Mockingjay but her main focus is to save Peeta after he was captured by the Capitol in the Quater Quell and is being 'hijacked'.",
-        "img": "hg3"
+        "img": "3"
     },
     {
         "id": "hg-4",
         "title": "The Hunger Games Mockingjay Part 2",
         "description": "After being attacked by a brainwashed Peeta Mellark, Katniss Everdeen joins an assault on the Capitol's armory in District 2. An aggravated civilian named Pugnax shoots her, but she is saved by her bulletproof Mockingjay suit.",
-        "img": "hg4"
+        "img": "4"
     }
 ]
